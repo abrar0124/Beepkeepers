@@ -1,21 +1,29 @@
 import React from "react";
 import "./Sassfile.scss";
+import { motion } from "framer-motion";
+
 function Products() {
   return (
     <>
-      <div
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
         className="Products"
         style={{
           width: "900px",
           display: "flex",
           justifyContent: "space-between",
-
           padding: "20px",
           cursor: "pointer",
           borderRadius: "100px",
         }}
       >
-        <div className="child1">
+        <motion.div
+          className="child1"
+          whileHover={{ scale: 1.2 }}
+          style={{ transition: "transform 1s ease-out" }}
+        >
           <p className="pp1" style={{ fontWeight: "bold" }}>
             Frontline Success Platform
           </p>
@@ -24,9 +32,10 @@ function Products() {
             worker experience.
           </p>
           <a href="" className="joinbutton">
-            Read More <img src="/Images/arrow2.jpeg"></img>
+            Read More <img src="/Images/arrow2.jpeg" alt="arrow" />
           </a>
-        </div>
+        </motion.div>
+
         <div
           style={{
             display: "flex",
@@ -34,7 +43,11 @@ function Products() {
             flexDirection: "column",
           }}
         >
-          <div className="child1">
+          <motion.div
+            className="child1"
+            whileHover={{ scale: 1.2 }}
+            style={{ transition: "transform 1s ease-out" }}
+          >
             <p className="pp1" style={{ fontWeight: "bold" }}>
               Security
               <div>
@@ -44,14 +57,18 @@ function Products() {
                 </p>
                 <div>
                   <a href="" className="joinbutton">
-                    Read More <img src="/Images/arrow2.jpeg"></img>
+                    Read More <img src="/Images/arrow2.jpeg" alt="arrow" />
                   </a>
                 </div>
               </div>
             </p>
-          </div>
+          </motion.div>
 
-          <div className="child1">
+          <motion.div
+            className="child1"
+            whileHover={{ scale: 1.2 }}
+            style={{ transition: "transform  1s ease-out" }}
+          >
             <p className="pp1" style={{ fontWeight: "bold" }}>
               Integrations
               <div>
@@ -61,29 +78,50 @@ function Products() {
                 </p>
                 <div>
                   <a href="" className="joinbutton">
-                    Read More <img src="/Images/arrow2.jpeg"></img>
+                    Read More <img src="/Images/arrow2.jpeg" alt="arrow" />
                   </a>
                 </div>
               </div>
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="child1">
-          <img
-            src="/Images/pic1.webp"
+        <motion.div whileHover={{ backgroundColor: "white" }} className="imgss">
+          <motion.img
+            className="sabaa"
+            whileHover={{ scale: 1.2 }}
             style={{
               width: "100%",
-              height: "150px",
               objectFit: "cover",
               borderRadius: "8px",
+              transition: "transform 1s ease-out",
             }}
+            src="/Images/ssa.webp"
+            alt="ssa"
           />
-          <a href="" className="joinbutton">
-            Read More <img src="/Images/arrow2.jpeg"></img>
-          </a>
-        </div>
-      </div>
+          <motion.p
+            whileHover={{ scale: 1.2 }}
+            style={{
+              fontSize: "17px",
+              padding: "3px",
+              fontWeight: "normal",
+              textAlign: "center",
+              transition: "transform 1s ease-out ",
+            }}
+          >
+            How the traffic control comp <br /> boosts frontline retention by
+            <br /> with Beekeeper and eduMe
+          </motion.p>
+          <motion.img
+            className="saba3"
+            whileHover={{ scale: 1.2 }}
+            transition={{ duration: 0.3 }}
+            style={{ width: "30px", marginLeft: "160px" }}
+            src="/Images/arrow2.jpeg"
+            alt="arrow"
+          />
+        </motion.div>
+      </motion.div>
     </>
   );
 }

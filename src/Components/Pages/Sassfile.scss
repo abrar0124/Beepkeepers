@@ -70,7 +70,6 @@
 .inp1 {
   padding: 15px;
   margin-top: 20px;
-  margin-left: 28px;
   border: 1px solid rgb(108, 105, 105);
   &::placeholder {
     font-size: 20px;
@@ -84,6 +83,7 @@
 .Sidee1 {
   background-color: rgb(243, 236, 236);
   border-radius: 10px;
+  transition: transform 1s ease-out;
 }
 
 input[type="checkbox"] {
@@ -113,11 +113,6 @@ span {
 }
 
 .joinbutton {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  align-items: center;
-  gap: 3px;
   width: 130px;
   color: black;
   text-decoration: none;
@@ -125,30 +120,35 @@ span {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   border-radius: 5px;
-  transition: transform 0.3s ease; /* Smooth transition for button hover */
+  // transition: transform 0.3s ease;
 }
 
 .joinbutton img {
   width: 25px;
   height: 21px;
-  transition: transform 0.3s ease; /* Smooth transition for image hover */
+  transition: transform 0.3s ease;
 }
 
 .joinbutton:hover img {
   transform: rotate(50deg);
   transition: all ease 1.5s;
 }
+
 .saba3:hover {
   transform: rotate(50deg);
   transition: all ease 1.5s;
 }
 .joinbutton:hover {
-  color: rgb(8, 164, 226);
+  color: rgb(10, 144, 197);
   transition: all ease 1.5s;
 }
 
+.imgs {
+  transition: transform 1s ease-out;
+}
+
 .imgs:hover {
-  transition: all ease 1s;
+  transform: scale(1.2);
 }
 .pp1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -161,14 +161,15 @@ span {
 
 .child1 {
   width: 200px;
-  padding: 5px;
-
+  padding: 10px;
+  margin-top: 15px;
   cursor: pointer;
 }
 .child1:hover {
   background-color: rgb(221, 243, 252);
   height: 190px;
   transition: all ease 1s;
+  border-radius: 10px;
 }
 
 .child2 {
@@ -183,10 +184,7 @@ span {
   transition: all ease 1s;
   padding: 10px;
 }
-.Para3 {
-  cursor: pointer;
-  text-align: left;
-}
+
 .Solution-con {
   width: 1000px;
 
@@ -199,25 +197,233 @@ span {
   .Para1 {
     font-size: 20px;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 14px;
   }
 
   .Para2 {
-    margin-left: 10px;
+    margin-left: 14px;
     font-size: 14px;
     line-height: 1.5;
     margin-top: -10px;
   }
 
   .Para3 {
-    line-height: 1.5;
     font-size: 14px;
-    margin-left: 10px;
-    padding: 5px;
-    display: inline;
-
+    padding: 8px;
+    margin-left: 8px;
+    display: inline-block; /* Use inline-block for proper scaling */
+    cursor: pointer;
+    text-align: left;
+    transition: all ease 0.5s; /* Smooth transition for both hover effects */
     &:hover {
-      background-color: rgb(216, 244, 255);
+      background-color: rgb(224, 246, 255);
+      transform: scale(1.2); /* Scale up by 10% */
     }
   }
+}
+.Solution-con {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.imgss {
+  box-shadow: 0 0 10px black;
+  width: 290px;
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: rgb(246, 242, 242);
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    transition: all ease 1s;
+  }
+
+  .sabaa:hover {
+    transition: all ease 1.5s;
+  }
+}
+.hh2 {
+  margin-top: -100px;
+}
+.p-hover {
+  padding: 10px;
+  margin-top: 10px;
+}
+.p-hover:hover {
+  background-color: rgb(226, 244, 250);
+  border-radius: 10px;
+}
+
+@media (max-width: 1226px) {
+  .hh2 {
+    margin-top: 100px;
+  }
+  .Divsss {
+    flex-direction: column;
+    margin-top: 350px;
+  }
+  .Sidee1 {
+    width: 0%;
+  }
+  .inp1 {
+    width: 90%;
+  }
+  .Sabba {
+    display: none;
+  }
+}
+.bep {
+  background: linear-gradient(
+    to right,
+    rgb(219, 27, 171),
+    #b67907,
+    rgb(206, 12, 141),
+    rgb(219, 27, 171)
+  );
+
+  height: auto;
+  .bh2 {
+    color: white;
+    padding-top: 100px;
+  }
+  .ss {
+    margin-top: -20px;
+  }
+}
+
+.joinbutton1 {
+  width: 160px;
+  background-color: white;
+  text-align: center;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 10px;
+  transition: all 0.4s ease-out;
+  &:hover {
+    background: none;
+    border: 1px solid white;
+    color: white;
+  }
+}
+
+.joinbutton1 img {
+  width: 25px;
+  height: 21px;
+  transition: transform 0.3s ease;
+  background: none;
+  border-radius: 100px;
+}
+
+.joinbutton2 {
+  width: 155px;
+  background-color: black;
+  text-align: center;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  transition: all 0.4s ease-out;
+  &:hover {
+    background: none;
+    border: 1px solid white;
+  }
+}
+
+.joinbutton2 img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+  background: none;
+  border-radius: 200px;
+}
+@media (max-width: 1225px) {
+  .Sidee1 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1225px) {
+  .Sidee1 {
+    width: 60%;
+  }
+  .www {
+    display: none;
+  }
+}
+
+@media (max-width: 1225px) {
+  .Sidee1 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 630px) {
+  .Products {
+    overflow: hidden;
+  }
+  .www {
+    display: block;
+  }
+}
+@media (max-width: 630px) {
+  .Sidee1 {
+    margin-left: -100px;
+  }
+  .Divsss {
+    margin-top: -200px;
+  }
+  .Products {
+    margin-left: -100px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 265px) {
+  .Sidee1 {
+    display: none;
+  }
+  .hh2 {
+    display: none;
+  }
+  .Products {
+    margin-top: 120px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 721px) {
+  .Products {
+    overflow: hidden;
+  }
+}
+@media (max-width: 452px) {
+  .sdsd {
+    flex-direction: column;
+    padding: 15px;
+  }
+}
+@media (max-width: 720px) {
+  .Divsss {
+    margin-top: -30px;
+  }
+}
+
+.fun {
+  color: rgb(116, 111, 111);
+  transition: all 1s ease-out;
+}
+.www1 {
+  background-color: #fdfdfd;
 }

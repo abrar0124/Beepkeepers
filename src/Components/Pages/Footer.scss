@@ -1,0 +1,129 @@
+.ttt {
+  background-color: rgb(36, 63, 80);
+  padding-top: 10px;
+}
+.main-footer2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+  gap: 50px;
+  cursor: pointer;
+
+  .sub-footer2 span {
+    font-size: 20px;
+    // color: rgb(241, 234, 234);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .p22 {
+    color: white;
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+    transition: all 1s ease-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .child-footer2 p {
+    font-size: 18px;
+    color: rgb(207, 207, 207);
+    text-align: left;
+    margin-left: 3px;
+    transition: all 1s ease-out;
+    &:hover {
+      color: white;
+      transform: scale(1.2);
+    }
+  }
+
+  .Footer2-btn {
+    color: rgb(22, 21, 21);
+    background-color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 10px;
+    font-weight: bold;
+    transition: all 1s ease;
+  }
+  .Footer2-btn:hover {
+    background-color: rgb(36, 35, 35);
+    color: white;
+    border: 1px solid rgb(36, 35, 35);
+  }
+  img {
+    margin-top: 10px;
+    padding: 10px;
+  }
+}
+.bottom-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 70px;
+  font-size: 20px;
+  margin-top: 100px;
+  font-weight: bold;
+  transition: all 1s ease-out;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.bot-footer2 {
+  border-top: 1px solid rgb(207, 207, 207);
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  .bott-child p {
+    font-size: 14px;
+    color: rgb(207, 207, 207);
+  }
+  h4 {
+    color: rgb(207, 207, 207);
+  }
+}
+@media (max-width: 703px) {
+  .Footer2-btn {
+    display: none;
+  }
+}
+@media (max-width: 703px) {
+  .Footer2-btn {
+    display: none;
+  }
+  .bottom-div {
+    flex-direction: column;
+  }
+  .bot-footer2 {
+    flex-direction: column;
+    margin-left: 42%;
+    border: none;
+  }
+  .main-footer2 {
+    flex-direction: column;
+    margin-left: 42%;
+  }
+}
+@media (max-width: 326px) {
+  .bot-footer2 {
+    display: none;
+  }
+  .bottom-div {
+    margin-right: 40%;
+    font-size: 20px;
+  }
+  .main-footer2 {
+    display: none;
+  }
+  .joinbutton1 {
+    display: none;
+  }
+  .joinbutton2 {
+    display: none;
+  }
+}

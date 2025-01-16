@@ -1,0 +1,333 @@
+.sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: width 0.3s;
+  display: none;
+  &.open {
+    width: 250px;
+    height: auto;
+  }
+  &.close {
+    width: 1px;
+  }
+  position: fixed;
+  top: 90px;
+  left: 0;
+
+  .sidebar-header {
+    padding: 10px;
+  }
+  .toggle-icon {
+    margin-right: 160px;
+    margin-top: 20px;
+  }
+  .toggle-button {
+    background: none;
+    border: none;
+  }
+  .options-sections {
+    font-size: 15px;
+    margin-left: 10px;
+    color: rgb(11, 140, 190);
+    line-height: 1.3;
+  }
+  .nav-menu {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        margin-left: 40px;
+
+        a {
+          color: white;
+          font-size: 20px;
+        }
+
+        a:hover {
+          border-bottom: 1px solid blue;
+        }
+      }
+    }
+    p {
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+
+  &.close {
+    .nav-menu {
+      display: none;
+      width: 0;
+      transition: all 1s ease;
+    }
+  }
+}
+
+@media (max-width: 493px) {
+  .sidebar {
+    display: block;
+    top: -35px;
+    left: 100px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+
+    &.open {
+      background-color: black;
+      padding: 118px; /* Reduced padding */
+      margin-left: -100px; /* Reduced margin */
+    }
+
+    &.close {
+      padding: 50px; /* Even smaller padding when closed */
+      margin-left: 0; /* Reset margin */
+    }
+  }
+  input {
+    display: none;
+  }
+}
+
+@media (max-width: 461px) {
+  .sidebar {
+    display: block;
+    top: -35px;
+    left: 100px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+
+    &.open {
+      background-color: black;
+      padding: 100px; /* Reduced padding */
+      margin-left: -100px; /* Reduced margin */
+    }
+
+    &.close {
+      padding: 50px; /* Even smaller padding when closed */
+      margin-left: 0; /* Reset margin */
+    }
+  }
+}
+
+@media (max-width: 382px) {
+  .sidebar {
+    display: block;
+    top: -35px;
+    left: 100px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+
+    &.open {
+      background-color: black;
+      padding: 70px; /* Reduced padding */
+      margin-left: -100px; /* Reduced margin */
+    }
+
+    &.close {
+      padding: 50px; /* Even smaller padding when closed */
+      margin-left: 0; /* Reset margin */
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .sidebar {
+    display: block;
+    top: -35px;
+    left: 100px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+
+    &.open {
+      background-color: black;
+      padding: 10px; /* Reduced padding */
+      margin-left: -100px; /* Reduced margin */
+    }
+
+    &.close {
+      padding: 50px; /* Even smaller padding when closed */
+      margin-left: 0; /* Reset margin */
+    }
+  }
+}
+
+@media (max-width: 357px) {
+  .sidebar {
+    display: block;
+    top: -35px;
+    left: 100px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+
+    &.open {
+      background-color: black;
+      padding: 50px; /* Reduced padding */
+      margin-left: -100px; /* Reduced margin */
+    }
+
+    &.close {
+      padding: 50px; /* Even smaller padding when closed */
+      margin-right: 100px;
+    }
+  }
+  .inpp1 {
+    display: none;
+  }
+}
+
+@media (max-width: 302px) {
+  .sidebar {
+    display: block;
+    top: -35px;
+    left: 100px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+    &.open {
+      background-color: black;
+      padding: 30px; /* Reduced padding */
+      margin-left: -100px; /* Reduced margin */
+    }
+
+    &.close {
+      padding: 50px; /* Even smaller padding when closed */
+      margin-left: 0; /* Reset margin */
+    }
+  }
+}
+
+@media (max-width: 276px) {
+  .sidebar {
+    display: block;
+    top: -35px;
+    left: 100px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+    &.open {
+      background-color: black;
+      padding: 15px; /* Reduced padding */
+      margin-left: -100px; /* Reduced margin */
+    }
+
+    &.close {
+      padding: 50px; /* Even smaller padding when closed */
+      margin-left: 0; /* Reset margin */
+    }
+  }
+}
+
+@media (max-width: 255px) {
+  .sidebar {
+    display: block;
+    top: -35px;
+    left: 100px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+    &.open {
+      background-color: black;
+      padding: 0; /* Reduced padding */
+      margin-left: -110px; /* Reduced margin */
+    }
+
+    &.close {
+      padding: 50px; /* Even smaller padding when closed */
+      margin-left: 0; /* Reset margin */
+    }
+  }
+}
+
+@media (max-width: 223px) {
+  .sidebar {
+    display: block;
+    top: -35px;
+    left: 100px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+    &.open {
+      background-color: black;
+      padding: 0; /* Reduced padding */
+      margin-left: -100px; /* Reduced margin */
+    }
+
+    &.close {
+      padding: 50px; /* Even smaller padding when closed */
+      margin-left: 0; /* Reset margin */
+    }
+  }
+}
+
+@media (max-width: 243px) {
+  .sidebar {
+    display: block;
+    top: -35px;
+    left: 100px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+    &.open {
+      background-color: black;
+      padding: 0; /* Reduced padding */
+      margin-left: -100px; /* Reduced margin */
+    }
+
+    &.close {
+      padding: 50px; /* Even smaller padding when closed */
+      margin-left: 0; /* Reset margin */
+    }
+    .buts {
+      margin-right: 112px;
+      font-size: 14px;
+    }
+    span {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 212px) {
+  .p1 {
+    display: none;
+  }
+  .sidebar {
+    display: block;
+    left: -60px;
+    top: -35px;
+    transition: transform 1s ease-out, padding 0.5s ease, margin 0.5s ease;
+    &.open {
+      background-color: black;
+      padding: 50px; /* Reduced padding */
+      margin-left: 10px; /* Reduced margin */
+    }
+
+    &.close {
+      // padding: 50px; /* Even smaller padding when closed */
+      margin-left: 0; /* Reset margin */
+    }
+    .buts {
+      margin-right: 112px;
+      font-size: 14px;
+    }
+    span {
+      font-size: 10px;
+    }
+  }
+}
+.inpp1 {
+  padding: 10px;
+  background-color: rgb(0, 0, 0);
+  margin-left: 50px;
+
+  &::placeholder {
+    color: white;
+  }
+}
+
+.Side2 {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span {
+  color: white;
+}
+.buts {
+  font-size: 30px;
+  transition: all 1s ease;
+  color: rgb(11, 140, 190);
+  background: none;
+}
+.custom-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
