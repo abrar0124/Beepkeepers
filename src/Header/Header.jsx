@@ -8,6 +8,7 @@ import About from "../Components/Pages/About";
 import Resources from "../Components/Pages/Resources";
 import { motion } from "framer-motion";
 import Sidebar from "../Components/Pages/Sidebar";
+import Loginapi from "../Components/Pages/Loginapi";
 function Header() {
   const [activeLink, setActiveLink] = useState(null);
 
@@ -65,6 +66,7 @@ function Header() {
                 </div>
               )}
             </motion.li>
+
             <motion.li
               whileHover={{ scale: 0.8 }}
               style={{ transition: "transform 1s ease-out" }}
@@ -140,8 +142,24 @@ function Header() {
                 </div>
               )}
             </motion.li>
+            <motion.li
+              whileHover={{ scale: 0.8 }}
+              style={{ transition: "transform 1s ease-out" }}
+              onMouseOver={() => handleMouseOver("Loginapi")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a href="#" className="a-link-double">
+                Loginapi
+              </a>
+              {activeLink === "Loginapi" && (
+                <div className="headerlink-dropdown5">
+                  <Loginapi />
+                </div>
+              )}
+            </motion.li>
           </ul>
         </div>
+
         <Sidebar />
         {/* Search Icon and Demo Button */}
         <motion.img
