@@ -1,230 +1,182 @@
-import { useContext, useState } from "react";
-import { ProductContext } from "./ProductProvider";
-import "./Sassfile.scss";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
-function Loginapi() {
-  const [id, setId] = useState("");
-  const [title, setTitle] = useState("");
-  const [price, setPrice] = useState("");
-  const [description, setDescription] = useState("");
-  const [category, setCategory] = useState({ id: "", name: "", image: "" });
-  const [images, setImages] = useState([]);
-  const { addProduct } = useContext(ProductContext);
+import { login, setField, reset } from "../../features/counter/Counterslice";
 
-  const handleAdd = () => {
-    const newProduct = {
-      id,
-      title,
-      price: Number(price), // Ensure price is a number
-      description,
-      images,
-      category: {
-        id: Number(category.id), // Ensure category ID is a number
-        name: category.name,
-        image: category.image,
-      },
-    };
-
-    addProduct(newProduct); // Call the addProduct function from context
-    resetForm(); // Reset the form fields after adding
-  };
-
-  const handleFileUpload = (e, type) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onload = () => {
-      if (type === "category") {
-        setCategory((prev) => ({ ...prev, image: reader.result }));
-      } else {
-        setImages((prev) => [...prev, reader.result]);
-      }
-    };
-    if (file) {
-      reader.readAsDataURL(file); // Convert the file to Base64
-    }
-  };
-
-  const resetForm = () => {
-    setId("");
-    setTitle("");
-    setPrice("");
-    setDescription("");
-    setCategory({ id: "", name: "", image: "" });
-    setImages([]);
-  };
+const Loginsignup = () => {
+  const dispatch = useDispatch();
+  const {
+    email,
+    password,
+    errorMessage,
+    isSignup,
+    submittedEmail,
+    submittedPassword,
+  } = useSelector((state) => state.counter);
 
   return (
-    <div
-      style={{
-        width: "800px",
-        height: "650px",
+    <>
+      <div style={styles.container}>
+        <div style={styles.textContainer}>
+          <h1 style={styles.text}>Welcome to Our Website</h1>
+          <p style={styles.text}>
+            {isSignup
+              ? "Please enter your details to sign up."
+              : "Please enter your details to login and access your account."}
+          </p>
+          <div>
+            <h2 style={{ fontWeight: "bold" }}>***Your Detail Here***</h2>
+            {submittedEmail && (
+              <p style={{ color: "white" }}>
+                <p style={{ color: "white" }}>Email:</p> {submittedEmail}
+              </p>
+            )}
+            {submittedPassword && (
+              <p>
+                <p>Password:</p> {submittedPassword}
+              </p>
+            )}
+          </div>
+        </div>
 
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      <h2 style={{ textAlign: "center", marginTop: "20px", color: "#333" }}>
-        Add New Product
-      </h2>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "15px",
-          padding: "20px",
-          borderRadius: "8px",
-        }}
-      >
-        <input
-          className="input-text"
-          type="number"
-          style={{
-            padding: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-          placeholder="Edit ID"
-        />
-
-        <input
-          className="input-text"
-          type="text"
-          style={{
-            padding: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Enter Title"
-        />
-
-        <input
-          className="input-text"
-          type="number"
-          style={{
-            padding: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-          placeholder="Price"
-        />
-
-        <input
-          className="input-text"
-          type="text"
-          style={{
-            padding: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          placeholder="Enter Description"
-        />
-
-        <input
-          className="input-text"
-          type="number"
-          style={{
-            padding: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
-          value={category.id}
-          onChange={(e) =>
-            setCategory((prev) => ({ ...prev, id: e.target.value }))
-          }
-          placeholder="Category ID"
-        />
-
-        <input
-          className="input-text"
-          type="text"
-          style={{
-            padding: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
-          value={category.name}
-          onChange={(e) =>
-            setCategory((prev) => ({ ...prev, name: e.target.value }))
-          }
-          placeholder="Category Name"
-        />
-
-        <input
-          className="input-text"
-          type="file"
-          accept="image/*"
-          style={{
-            padding: "5px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
-          onChange={(e) => handleFileUpload(e, "category")}
-          placeholder="Category Image"
-        />
-
-        {[...Array(3)].map((_, i) => (
-          <input
-            key={i}
-            className="input-text"
-            type="file"
-            accept="image/*"
-            style={{
-              padding: "5px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-            }}
-            onChange={(e) => handleFileUpload(e, "image")}
-            placeholder={`Image ${i + 1}`}
-          />
-        ))}
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: "15px",
-            marginTop: "20px",
-          }}
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          style={styles.formContainer}
         >
-          <button
-            className="vvv"
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#007BFF",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
+          <h1 style={styles.title}>Login Form</h1>
+          <div style={styles.inputContainer}>
+            <label htmlFor="email" style={styles.label}>
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) =>
+                dispatch(setField({ field: "email", value: e.target.value }))
+              }
+              style={styles.input}
+            />
+          </div>
+          <div style={styles.inputContainer}>
+            <label htmlFor="password" style={styles.label}>
+              Password
+            </label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) =>
+                dispatch(setField({ field: "password", value: e.target.value }))
+              }
+              style={styles.input}
+            />
+          </div>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => {
+              dispatch(login()); // Trigger the login action directly
             }}
-            onClick={handleAdd}
+            style={styles.button}
           >
             Login
-          </button>
-          <button
-            className="vvv"
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#6c757d",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
+          </motion.button>
+
+          {errorMessage && <p style={styles.error}>{errorMessage}</p>}
+
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => {
+              dispatch(reset()); // Trigger the reset action directly
             }}
-            onClick={resetForm}
+            style={styles.button}
           >
             Reset
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
-    </div>
+    </>
   );
-}
+};
 
-export default Loginapi;
+const styles = {
+  container: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    height: "auto",
+    width: "1000px",
+    backgroundColor: "rgb(51, 51, 110)",
+    padding: "20px",
+  },
+  textContainer: {
+    textAlign: "center",
+    color: "white",
+  },
+  text: {
+    fontSize: "24px",
+    marginBottom: "20px",
+    color: "white",
+    textAlign: "center",
+  },
+  formContainer: {
+    backgroundColor: "rgb(66, 66, 119)",
+    padding: "20px 40px",
+    borderRadius: "10px",
+    border: "1px solid gray",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2)",
+    textAlign: "center",
+    width: "40%",
+  },
+  title: {
+    color: "white",
+    fontSize: "28px",
+    marginBottom: "20px",
+  },
+  inputContainer: {
+    marginBottom: "20px",
+    textAlign: "left",
+  },
+  label: {
+    display: "block",
+    color: "white",
+    fontSize: "16px",
+    marginBottom: "8px",
+  },
+  input: {
+    width: "100%",
+    padding: "10px",
+    borderRadius: "5px",
+    border: "1px solid white",
+    backgroundColor: "rgb(66, 66, 119)",
+    color: "white",
+    fontSize: "14px",
+  },
+  button: {
+    width: "100%",
+    margin: "10px 0",
+    padding: "12px",
+    backgroundColor: "skyblue",
+    color: "black",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+    fontWeight: "bold",
+    fontSize: "16px",
+    transition: "background-color 0.3s",
+  },
+  error: {
+    color: "red",
+    fontSize: "16px",
+    marginTop: "10px",
+  },
+};
+
+export default Loginsignup;
