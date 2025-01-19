@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 import Whychoosekeeper from "../Components/Pages/Whychoosekeeper";
 import Products from "../Components/Pages/Products";
 import Pricing from "../Components/Pages/Pricing";
@@ -8,11 +9,10 @@ import About from "../Components/Pages/About";
 import Resources from "../Components/Pages/Resources";
 import { motion } from "framer-motion";
 import Sidebar from "../Components/Pages/Sidebar";
-import Loginapi from "../Components/Pages/Loginapi";
+
 function Header() {
   const [activeLink, setActiveLink] = useState(null);
 
-  // Function to handle dropdown display
   const handleMouseOver = (link) => {
     setActiveLink(link);
   };
@@ -82,6 +82,7 @@ function Header() {
                 </div>
               )}
             </motion.li>
+
             <motion.li
               whileHover={{ scale: 0.8 }}
               style={{ transition: "transform 1s ease-out" }}
@@ -97,6 +98,7 @@ function Header() {
                 </div>
               )}
             </motion.li>
+
             <motion.li
               whileHover={{ scale: 0.8 }}
               style={{ transition: "transform 1s ease-out" }}
@@ -112,6 +114,7 @@ function Header() {
                 </div>
               )}
             </motion.li>
+
             <motion.li
               whileHover={{ scale: 0.8 }}
               style={{ transition: "transform 1s ease-out" }}
@@ -127,6 +130,7 @@ function Header() {
                 </div>
               )}
             </motion.li>
+
             <motion.li
               whileHover={{ scale: 0.8 }}
               style={{ transition: "transform 1s ease-out" }}
@@ -142,20 +146,15 @@ function Header() {
                 </div>
               )}
             </motion.li>
+
+            {/* Replace Loginapi dropdown with router Link */}
             <motion.li
               whileHover={{ scale: 0.8 }}
               style={{ transition: "transform 1s ease-out" }}
-              onMouseOver={() => handleMouseOver("Loginapi")}
-              onMouseLeave={handleMouseLeave}
             >
-              <a href="#" className="a-link-double">
+              <Link to="/loginapi" className="a-link-double">
                 Loginapi
-              </a>
-              {activeLink === "Loginapi" && (
-                <div className="headerlink-dropdown5">
-                  <Loginapi />
-                </div>
-              )}
+              </Link>
             </motion.li>
           </ul>
         </div>
@@ -181,8 +180,8 @@ function Header() {
           Schedule a demo
         </motion.button>
       </div>
-      <Sidebar />
     </>
   );
 }
+
 export default Header;

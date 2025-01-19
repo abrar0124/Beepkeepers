@@ -73,7 +73,11 @@ const Ebook = () => {
     <>
       <img
         className="Sabba"
-        style={{ marginTop: "5%", marginLeft: "65%", cursor: "pointer" }}
+        style={{
+          marginTop: "13%",
+          marginLeft: "65%",
+          cursor: "pointer",
+        }}
         src="/Images/Saba1.svg"
       />
       <motion.h2

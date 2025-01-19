@@ -1,6 +1,7 @@
 import React from "react";
 import "./Sassfile.scss";
 import { motion } from "framer-motion";
+import Header from "../../Header/Header";
 
 function About() {
   return (
