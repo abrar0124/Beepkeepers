@@ -68,7 +68,6 @@ const Ebook = () => {
       behavior: "smooth",
     });
   };
-
   return (
     <>
       <img

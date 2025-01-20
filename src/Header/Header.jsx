@@ -44,7 +44,9 @@ function Header() {
             className="p1"
             style={{ transition: "transform 1s ease-out" }}
           >
-            BEEKEEPER
+            <Link to="/" className="a-link-double">
+              BEEKEEPER
+            </Link>
           </motion.p>
         </div>
 
@@ -152,8 +154,8 @@ function Header() {
               whileHover={{ scale: 0.8 }}
               style={{ transition: "transform 1s ease-out" }}
             >
-              <Link to="/loginapi" className="a-link-double">
-                Loginapi
+              <Link to="/login" className="a-link-double">
+                Login
               </Link>
             </motion.li>
           </ul>

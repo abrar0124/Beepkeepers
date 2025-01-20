@@ -12,13 +12,11 @@ const Loginapi = () => {
 
   return (
     <>
-      <Header />
       <div>
         <div className="login-container">
           <div className="text-container">
             <img src="/Images/download1.png" className="image1" />
           </div>
-          {/* <img src="/Images/logo512.png" className="logoo" /> */}
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,6 +56,30 @@ const Loginapi = () => {
                 className="input"
               />
             </div>
+            <div
+              className="additional-options"
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginTop: "10px",
+              }}
+            >
+              <div>
+                <input type="checkbox" id="rememberMe" />
+                <label htmlFor="rememberMe" className="remember-me-label">
+                  Remember Me
+                </label>
+              </div>
+
+              <a
+                href=""
+                className="forgot-password"
+                style={{ cursor: "pointer" }}
+              >
+                Forgot Password?
+              </a>
+            </div>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -82,6 +104,20 @@ const Loginapi = () => {
             >
               Reset
             </motion.button>
+            <p style={{ color: "white", cursor: "pointer" }}>
+              Or sign In with other account?
+            </p>
+            <div
+              className="flexo"
+              style={{ display: "flex", gap: "4px", justifyContent: "center" }}
+            >
+              <p style={{ color: "white", cursor: "pointer" }}>
+                Don,t have an account?
+              </p>
+              <a href="" className="zzzz">
+                Click here to signup
+              </a>
+            </div>
           </motion.div>
           <div>
             <img src="/Images/download2.png" className="image2" />
@@ -106,4 +142,5 @@ const Loginapi = () => {
     </>
   );
 };
+
 export default Loginapi;

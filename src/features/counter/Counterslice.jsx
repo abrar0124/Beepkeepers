@@ -5,7 +5,7 @@ const Counterslice = createSlice({
   name: "counter",
   initialState,
   reducers: {
-    setField: (state, action) => {
+    setField: (state = initialState, action) => {
       const { field, value } = action.payload;
       state[field] = value;
     },

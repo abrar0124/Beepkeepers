@@ -3,16 +3,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loginapi from "./Components/Pages/Loginapi";
 import Header from "./Header/Header";
 import Ebook from "./Components/Pages/Ebook";
+import LoginPage from "./pages/LoginPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <>
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Routes>
-          <Route path="/loginapi" element={<Loginapi />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
-        <Ebook />
+        {/* <Ebook /> */}
       </Router>
     </>
   );
