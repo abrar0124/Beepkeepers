@@ -15,7 +15,7 @@ function Whychoosekeeper() {
           display: "flex",
           justifyContent: "center",
           gap: "15px",
-          padding: "20px",
+          padding: "40px",
           cursor: "pointer",
           borderRadius: "100px",
         }}
@@ -47,6 +47,7 @@ function Whychoosekeeper() {
               height: "150px",
               objectFit: "cover",
               borderRadius: "8px",
+              marginRight: "50px",
             }}
             src="/Images/pic1.webp"
           />
