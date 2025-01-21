@@ -12,14 +12,18 @@ const Abouts = () => {
       }}
       aria-labelledby="solutions-title"
     >
-      <h2 id="solutions-title" className="solutions-title">
+      <h2
+        id="solutions-title"
+        className="solutions-title"
+        style={{ color: "purple" }}
+      >
         About
       </h2>
       <ul className="solutions-features">
         <li className="feature-item">✅Secure and Reliable</li>
         <li className="feature-item">👍 Easy to Use</li>
         <li className="feature-item">💰 Affordable Pricing</li>
-        <li className="feature-item"> 📳24/7 Customer Support</li>
+        <li className="feature-item">📳24/7 Customer Support</li>
       </ul>
     </section>
   );

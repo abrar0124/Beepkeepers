@@ -26,6 +26,7 @@ const ScrollButton = () => {
         justifyContent: "center",
         alignItems: "center",
         padding: "0 10px",
+        background: "none",
       }}
     >
       <img

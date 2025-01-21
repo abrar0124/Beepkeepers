@@ -12,7 +12,11 @@ const Resourcess = () => {
       }}
       aria-labelledby="solutions-title"
     >
-      <h2 id="solutions-title" className="solutions-title">
+      <h2
+        id="solutions-title"
+        className="solutions-title"
+        style={{ color: "red" }}
+      >
         Resources
       </h2>
       <ul className="solutions-features">

@@ -12,7 +12,11 @@ const Pricings = () => {
       }}
       aria-labelledby="solutions-title"
     >
-      <h2 id="solutions-title" className="solutions-title">
+      <h2
+        id="solutions-title"
+        className="solutions-title"
+        style={{ color: "blue" }}
+      >
         Pricings
       </h2>
       <ul className="solutions-features">
