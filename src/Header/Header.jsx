@@ -59,9 +59,12 @@ function Header() {
               onMouseOver={() => handleMouseOver("why-choose-keeper")}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="#" className="a-link-double">
+              {/* <a href="#" className="a-link-double">
                 Why choose keeper
-              </a>
+              </a> */}
+              <Link to="whychoose" className="a-link-double">
+                Why choose keeper
+              </Link>
               {activeLink === "why-choose-keeper" && (
                 <div className="headerlink-dropdown">
                   <Whychoosekeeper />
@@ -75,9 +78,9 @@ function Header() {
               onMouseOver={() => handleMouseOver("products")}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="#" className="a-link-double">
+              <Link to="/Productz" className="a-link-double">
                 Products
-              </a>
+              </Link>
               {activeLink === "products" && (
                 <div className="headerlink-dropdown1">
                   <Products />
@@ -91,9 +94,9 @@ function Header() {
               onMouseOver={() => handleMouseOver("solution")}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="#" className="a-link-double">
+              <Link to="/Solutionz" className="a-link-double">
                 Solution
-              </a>
+              </Link>
               {activeLink === "solution" && (
                 <div className="headerlink-dropdown2">
                   <Solution />
@@ -107,9 +110,9 @@ function Header() {
               onMouseOver={() => handleMouseOver("pricing")}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="#" className="a-link-double">
+              <Link to="/Pricingz" className="a-link-double">
                 Pricing
-              </a>
+              </Link>
               {activeLink === "pricing" && (
                 <div className="headerlink-dropdown">
                   <Pricing />
@@ -123,9 +126,9 @@ function Header() {
               onMouseOver={() => handleMouseOver("resources")}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="#" className="a-link-double">
+              <Link to="/Resourcez" className="a-link-double">
                 Resources
-              </a>
+              </Link>
               {activeLink === "resources" && (
                 <div className="headerlink-dropdown3">
                   <Resources />
@@ -139,9 +142,9 @@ function Header() {
               onMouseOver={() => handleMouseOver("about")}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="#" className="a-link-double">
+              <Link to="/Aboutz" className="a-link-double">
                 About
-              </a>
+              </Link>
               {activeLink === "about" && (
                 <div className="headerlink-dropdown4">
                   <About />

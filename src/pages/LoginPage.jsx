@@ -4,7 +4,6 @@ import Header from "../Header/Header";
 const LoginPage = () => {
   return (
     <>
-      <Header />
       <Loginapi />
     </>
   );

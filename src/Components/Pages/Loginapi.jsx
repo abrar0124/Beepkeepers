@@ -1,21 +1,53 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
+import axios from "axios";
 import "./Sassfile.scss";
 import { login, setField, reset } from "../../features/counter/Counterslice";
-import Header from "../../Header/Header";
 
 const Loginapi = () => {
   const dispatch = useDispatch();
-  const { email, password, errorMessage, submittedEmail, submittedPassword } =
-    useSelector((state) => state.counter);
 
+  const {
+    name,
+    email,
+    password,
+    errorMessage,
+    submittedEmail,
+    submittedPassword,
+  } = useSelector((state) => state.counter);
+  const loginfunction = async () => {
+    try {
+      const data = {
+        name,
+        email,
+        password,
+        avatar: "https://picsum.photos/800",
+      };
+      const response = await axios.post(
+        "https://api.escuelajs.co/api/v1/users/",
+        data
+      );
+
+      if (response.status === 200 || response.status === 201) {
+        console.log("API Response:", response.data);
+      } else {
+        throw new Error("Failed to create user.");
+      }
+    } catch (error) {
+      console.error("API Error:", error);
+    }
+  };
   return (
     <>
       <div>
         <div className="login-container">
           <div className="text-container">
-            <img src="/Images/download1.png" className="image1" />
+            <img
+              src="/Images/download1.png"
+              className="image1"
+              alt="Login visual 1"
+            />
           </div>
           <motion.div
             initial={{ opacity: 0, y: -50 }}
@@ -25,6 +57,19 @@ const Loginapi = () => {
           >
             <h1 className="title">Sign In</h1>
             <div className="input-container">
+              <label htmlFor="name" className="label">
+                Name
+              </label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Enter your name"
+                value={name}
+                onChange={(e) =>
+                  dispatch(setField({ field: "name", value: e.target.value }))
+                }
+                className="input"
+              />
               <label htmlFor="email" className="label">
                 Email
               </label>
@@ -71,29 +116,25 @@ const Loginapi = () => {
                   Remember Me
                 </label>
               </div>
-
               <a
-                href=""
+                href="#"
                 className="forgot-password"
                 style={{ cursor: "pointer" }}
               >
                 Forgot Password?
               </a>
             </div>
+
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => {
-                dispatch(login());
-              }}
+              onClick={loginfunction}
               className="button"
             >
               Sign in
             </motion.button>
             <br />
-
             {errorMessage && <p className="error">{errorMessage}</p>}
-
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -105,22 +146,26 @@ const Loginapi = () => {
               Reset
             </motion.button>
             <p style={{ color: "white", cursor: "pointer" }}>
-              Or sign In with other account?
+              Or sign In with another account?
             </p>
             <div
               className="flexo"
               style={{ display: "flex", gap: "4px", justifyContent: "center" }}
             >
               <p style={{ color: "white", cursor: "pointer" }}>
-                Don,t have an account?
+                Don’t have an account?
               </p>
-              <a href="" className="zzzz">
+              <a href="#" className="zzzz">
                 Click here to signup
               </a>
             </div>
           </motion.div>
           <div>
-            <img src="/Images/download2.png" className="image2" />
+            <img
+              src="/Images/download2.png"
+              className="image2"
+              alt="Login visual 2"
+            />
           </div>
         </div>
         <div>
@@ -129,12 +174,12 @@ const Loginapi = () => {
           </h2>
           {submittedEmail && (
             <p style={{ color: "white", marginLeft: "40%" }}>
-              <p style={{ color: "white" }}>Email:</p> {submittedEmail}
+              <span>Email:</span> {submittedEmail}
             </p>
           )}
           {submittedPassword && (
             <p style={{ color: "white", marginLeft: "40%" }}>
-              <p style={{ color: "white" }}>Password:</p> {submittedPassword}
+              <span>Password:</span> {submittedPassword}
             </p>
           )}
         </div>

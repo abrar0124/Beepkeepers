@@ -1,11 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {};
+const initialState = {
+  name: "",
+  email: "",
+  password: "",
+  avatar: "https://picsum.photos/800",
+  errorMessage: "",
+  submittedEmail: "",
+  submittedPassword: "",
+};
+
 const Counterslice = createSlice({
   name: "counter",
   initialState,
   reducers: {
-    setField: (state = initialState, action) => {
+    setField: (state, action) => {
       const { field, value } = action.payload;
       state[field] = value;
     },
@@ -15,31 +24,32 @@ const Counterslice = createSlice({
       const isPasswordValid =
         state.password === "tttt4444" && state.password.length >= 8;
 
-      // Check for empty fields and validation errors
-      if (!state.email || !state.password) {
-        state.errorMessage = "Please enter both fields.";
+      // Validation logic
+      if (!state.email || !state.password || !state.name) {
+        state.errorMessage = "Please fill out all fields.";
       } else if (!isEmailValid || !isPasswordValid) {
         state.errorMessage =
-          "Please enter valid email and password (8+ characters).";
+          "Please enter a valid email and password (8+ characters).";
       } else {
-        // Reset error and proceed with login
+        // Successful login
         state.errorMessage = "";
-        // Store submitted email and password in the Redux store
         state.submittedEmail = state.email;
         state.submittedPassword = state.password;
 
-        // Clear the input fields after successful login
+        // Clear the input fields
+        state.name = "";
         state.email = "";
         state.password = "";
       }
     },
 
     reset: (state) => {
+      state.name = "";
       state.email = "";
       state.password = "";
-      state.errorMessage = ""; // Reset error message on reset
-      state.submittedEmail = ""; // Reset submitted email
-      state.submittedPassword = ""; // Reset submitted password
+      state.errorMessage = "";
+      state.submittedEmail = "";
+      state.submittedPassword = "";
     },
   },
 });

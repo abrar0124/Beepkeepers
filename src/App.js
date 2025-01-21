@@ -1,21 +1,30 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Loginapi from "./Components/Pages/Loginapi";
-import Header from "./Header/Header";
-import Ebook from "./Components/Pages/Ebook";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
+import Header from "./Header/Header";
+import Whychoose from "./pages/Whychoose";
+import Productz from "./pages/Productz";
+import Solutionz from "./pages/Solutionz";
+import Pricingz from "./pages/Pricingz";
+import Resourcez from "./pages/Resourcez";
+import Aboutz from "./pages/Aboutz";
 
 function App() {
   return (
     <>
       <Router>
-        {/* <Header /> */}
+        <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/whychoose" element={<Whychoose />} />
+          <Route path="/Productz" element={<Productz />} />
+          <Route path="/Solutionz" element={<Solutionz />} />
+          <Route path="/Pricingz" element={<Pricingz />} />
+          <Route path="/Resourcez" element={<Resourcez />} />
+          <Route path="/Aboutz" element={<Aboutz />} />
         </Routes>
-        {/* <Ebook /> */}
       </Router>
     </>
   );

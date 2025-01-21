@@ -13,7 +13,7 @@ export const ProductProvider = ({ children }) => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get(
-          "https://api.escuelajs.co/api/v1/products"
+          "https://api.escuelajs.co/api/v1/users/"
         );
         setPosts(response.data); // Save API data to state
         console.log("Fetched Products:", response.data); // Log fetched products
@@ -24,7 +24,6 @@ export const ProductProvider = ({ children }) => {
         console.error("Error fetching products:", err.message);
       }
     };
-
     fetchPosts();
   }, []);
 
@@ -45,7 +44,6 @@ export const ProductProvider = ({ children }) => {
       setError(error.message);
     }
   };
-
   console.log("Current Products:", posts); // Log all products, including newly added ones
 
   return (
