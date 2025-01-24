@@ -11,6 +11,7 @@ import Resourcez from "./pages/Resourcez";
 import Aboutz from "./pages/Aboutz";
 import Frontlines from "./pages/Frontlines";
 import Producttour from "./pages/Productstour";
+import Exps from "./pages/Exps";
 
 function App() {
   return (
@@ -28,10 +29,10 @@ function App() {
           <Route path="/Aboutz" element={<Aboutz />} />
           <Route path="/Frontlines" element={<Frontlines />} />
           <Route path="/Producttour" element={<Producttour />} />
+          <Route path="/Exps" element={<Exps />} />
         </Routes>
       </Router>
     </>
   );
 }
-
 export default App;
