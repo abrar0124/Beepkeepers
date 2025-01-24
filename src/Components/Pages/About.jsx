@@ -8,8 +8,8 @@ function About() {
     <>
       <motion.div
         className="Solution-con"
-        initial={{ opacity: 0, x: 150 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 100 }} // firstly element is invisible and shifted full element in lower place
+        animate={{ opacity: 1, y: 0 }} // then anfter animation element is 100% visible and element commes its original position.
         transition={{ duration: 1 }}
         style={{
           width: "1150px",
@@ -87,7 +87,7 @@ function About() {
           </motion.p>
           <img
             className="saba3"
-            style={{ width: "30px", marginLeft: "160px" }}
+            style={{ width: "30px", marginLeft: "255px" }}
             src="/Images/arrow2.jpeg"
           ></img>
         </motion.div>
@@ -95,5 +95,4 @@ function About() {
     </>
   );
 }
-
 export default About;

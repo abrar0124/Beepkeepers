@@ -6,22 +6,22 @@ function Products() {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 100 }} // firstly element is invisible and shifted full element in lower place
+        animate={{ opacity: 1, y: 0 }} // then anfter animation element is 100% visible and element commes its original position.
         transition={{ duration: 1 }}
         className="Products"
         style={{
-          width: "900px",
+          width: "930px",
           display: "flex",
           justifyContent: "space-between",
-          padding: "20px",
+          padding: "30px",
           cursor: "pointer",
           borderRadius: "100px",
         }}
       >
         <motion.div
           className="child1"
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.1 }}
           style={{ transition: "transform 1s ease-out" }}
         >
           <p className="pp1" style={{ fontWeight: "bold" }}>
@@ -45,7 +45,7 @@ function Products() {
         >
           <motion.div
             className="child1"
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.1 }}
             style={{ transition: "transform 1s ease-out" }}
           >
             <p className="pp1" style={{ fontWeight: "bold" }}>
@@ -66,7 +66,7 @@ function Products() {
 
           <motion.div
             className="child1"
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.1 }}
             style={{ transition: "transform  1s ease-out" }}
           >
             <p className="pp1" style={{ fontWeight: "bold" }}>
@@ -92,6 +92,7 @@ function Products() {
             whileHover={{ scale: 1.2 }}
             style={{
               width: "100%",
+
               objectFit: "cover",
               borderRadius: "8px",
               transition: "transform 1s ease-out",
@@ -116,7 +117,7 @@ function Products() {
             className="saba3"
             whileHover={{ scale: 1.2 }}
             transition={{ duration: 0.3 }}
-            style={{ width: "30px", marginLeft: "160px" }}
+            style={{ width: "30px", marginLeft: "255px" }}
             src="/Images/arrow2.jpeg"
             alt="arrow"
           />

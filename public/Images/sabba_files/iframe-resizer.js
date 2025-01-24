@@ -1,0 +1,2 @@
+!function(){var e={4232:function(e){"use strict";e.exports=jQuery}},r={};function t(i){var o=r[i];if(void 0!==o)return o.exports;var n=r[i]={exports:{}};return e[i](n,n.exports,t),n.exports}!function(){var e,r=t(4232);(e=r)("iframe").length&&e("iframe").each(((r,t)=>{const i=e(t).attr("src");-1!=i.indexOf("https://pricing.services.beekeeper.io")&&iFrameResize({log:!1,checkOrigin:i,heightCalculationMethod:"bodyScroll"},e(t).get(0))}))}()}();
+//# sourceMappingURL=iframe-resizer.js.map

@@ -1,0 +1,25 @@
+.hs {
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(116, 111, 111);
+  text-decoration: none;
+  line-height: 1.9;
+  transition: all 1s ease-out;
+  &:hover {
+    color: rgb(95, 199, 240);
+  }
+}
+.hss {
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(95, 199, 240);
+  text-decoration: none;
+  line-height: 1.9;
+}
+.img-s {
+  margin-top: -23%;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 80%;
+  margin-left: 50px;
+}

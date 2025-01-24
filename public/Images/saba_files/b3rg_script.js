@@ -1,0 +1,2 @@
+(()=>{const{feWp:e}=window,{doAction:n,applyFilters:t}=e.hooks;document.addEventListener("DOMContentLoaded",(()=>{const e=t("b3rg_slider_breakpoints",{}),o=n=>{for(const t in e)if(n<=e[t])return t;return"desktop"};let r=o(screen.width);n("b3rg_breakpoint_changed",r);new ResizeObserver((e=>{for(const t of e){const{contentRect:e}=t,d=e.width,s=o(d);r!==s&&(r=s,n("b3rg_breakpoint_changed",s))}})).observe(document.body)}))})();
+//# sourceMappingURL=b3rg_script.js.map

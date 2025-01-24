@@ -39,15 +39,11 @@ function Header() {
               transition: "transform 1s ease-out",
             }}
           />
-          <motion.p
-            whileHover={{ scale: 1.2 }}
-            className="p1"
-            style={{ transition: "transform 1s ease-out" }}
-          >
-            <Link to="/" className="a-link-double">
+          <p className="p1" style={{ transition: "transform 1s ease-out" }}>
+            <Link to="/" className="abeep">
               BEEKEEPER
             </Link>
-          </motion.p>
+          </p>
         </div>
 
         {/* Menu Section */}

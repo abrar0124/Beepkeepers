@@ -11,7 +11,7 @@ function Solution() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        style={{ width: "1000px", height: "auto" }}
+        style={{ width: "1000px", height: "auto", padding: "30px" }}
       >
         <div>
           <motion.p
@@ -119,7 +119,7 @@ function Solution() {
           </motion.p>
           <img
             className="saba3"
-            style={{ width: "30px", marginLeft: "160px" }}
+            style={{ width: "30px", marginLeft: "240px" }}
             src="/Images/arrow2.jpeg"
           ></img>
         </motion.div>

@@ -54,7 +54,9 @@ const ProductList = () => {
     <div
       className="Products"
       style={{
+        marginTop: "5%",
         display: "flex",
+        justifyContent: "center",
         flexWrap: "wrap",
       }}
     >

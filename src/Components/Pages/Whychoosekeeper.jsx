@@ -2,6 +2,7 @@ import React from "react";
 import "./Sassfile.scss";
 import { motion } from "framer-motion";
 import Header from "../../Header/Header";
+import { Link } from "react-router-dom";
 function Whychoosekeeper() {
   return (
     <>
@@ -15,7 +16,7 @@ function Whychoosekeeper() {
           display: "flex",
           justifyContent: "center",
           gap: "15px",
-          padding: "40px",
+          padding: "60px",
           cursor: "pointer",
           borderRadius: "100px",
         }}
@@ -32,11 +33,10 @@ function Whychoosekeeper() {
             See why Beekeeper is the trusted choice for enhancing the deskless
             worker experience.
           </p>
-          <a href="" className="joinbutton">
+          <Link to="/Frontlines" className="joinbutton">
             Read More <img src="/Images/arrow2.jpeg"></img>
-          </a>
+          </Link>
         </motion.div>
-
         <motion.div whileHover={{ backgroundColor: "white" }} className="imgss">
           <motion.img
             className="sabaa"
@@ -64,7 +64,7 @@ function Whychoosekeeper() {
           </motion.p>
           <img
             className="saba3"
-            style={{ width: "30px", marginLeft: "160px" }}
+            style={{ width: "30px", marginLeft: "205px" }}
             src="/Images/arrow2.jpeg"
           ></img>
         </motion.div>

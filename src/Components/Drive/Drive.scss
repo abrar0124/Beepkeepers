@@ -1,0 +1,46 @@
+.Drive-con {
+  background-color: rgb(218, 243, 255);
+  .content-containerp {
+    padding-top: 50px;
+    margin-left: 20%;
+    font-size: 35px;
+  }
+}
+
+.Drive-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  .question-container {
+    margin-bottom: 1rem;
+    width: 100%;
+
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-left: 18%;
+
+      p a {
+        text-decoration: none;
+        color: rgb(124, 121, 121); // Update question text color
+        font-weight: bold;
+      }
+    }
+
+    .answer-list {
+      margin-top: 0.5rem;
+      padding-left: 1.5rem;
+      color: black;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+}

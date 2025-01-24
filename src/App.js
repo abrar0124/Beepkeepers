@@ -9,6 +9,8 @@ import Solutionz from "./pages/Solutionz";
 import Pricingz from "./pages/Pricingz";
 import Resourcez from "./pages/Resourcez";
 import Aboutz from "./pages/Aboutz";
+import Frontlines from "./pages/Frontlines";
+import Producttour from "./pages/Productstour";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/Pricingz" element={<Pricingz />} />
           <Route path="/Resourcez" element={<Resourcez />} />
           <Route path="/Aboutz" element={<Aboutz />} />
+          <Route path="/Frontlines" element={<Frontlines />} />
+          <Route path="/Producttour" element={<Producttour />} />
         </Routes>
       </Router>
     </>

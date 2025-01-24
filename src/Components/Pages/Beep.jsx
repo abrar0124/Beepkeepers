@@ -1,8 +1,12 @@
 import "./Sassfile.scss";
 import "./Footer.scss";
-function Beep() {
+
+function Beep(props) {
+  // const {type}=props;
+
   return (
     <>
+      {/* iftyope===p<p>{children} */}
       <div className="bep">
         <h2 className="bh2" style={{ textAlign: "center", fontSize: "40px" }}>
           Ready to get started with Beekeeper?

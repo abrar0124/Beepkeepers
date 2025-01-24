@@ -23,6 +23,7 @@ const Sidebar2 = () => {
           padding: "10px",
           cursor: "pointer",
           flex: "1",
+          marginTop: "4%",
         }}
       >
         <motion.div
