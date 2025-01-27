@@ -55,9 +55,6 @@ function Header() {
               onMouseOver={() => handleMouseOver("why-choose-keeper")}
               onMouseLeave={handleMouseLeave}
             >
-              {/* <a href="#" className="a-link-double">
-                Why choose keeper
-              </a> */}
               <Link to="whychoose" className="a-link-double">
                 Why choose keeper
               </Link>
