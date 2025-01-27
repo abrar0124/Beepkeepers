@@ -25,13 +25,15 @@ function Products() {
           whileHover={{ scale: 1.1 }}
           style={{ transition: "transform 1s ease-out" }}
         >
-          <p className="pp1" style={{ fontWeight: "bold" }}>
-            Frontline Success Platform
-          </p>
-          <p className="pp2">
-            See why Beekeeper is the trusted choice for enhancing the deskless
-            worker experience.
-          </p>
+          <Link to={"/Exps"} style={{ textDecoration: "none", color: "black" }}>
+            <p className="pp1" style={{ fontWeight: "bold" }}>
+              Frontline Success Platform
+            </p>
+            <p className="pp2">
+              See why Beekeeper is the trusted choice for enhancing the deskless
+              worker experience.
+            </p>
+          </Link>
           <Link to="/Exps" className="joinbutton">
             Read More <img src="/Images/arrow2.jpeg" alt="arrow" />
           </Link>
@@ -52,10 +54,15 @@ function Products() {
             <p className="pp1" style={{ fontWeight: "bold" }}>
               Security
               <div>
-                <p className="pp2">
-                  See why Beekeeper is the trusted choice for enhancing the
-                  deskless worker experience.
-                </p>
+                <Link
+                  to={"/Exps"}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <p className="pp2">
+                    See why Beekeeper is the trusted choice for enhancing the
+                    deskless worker experience.
+                  </p>
+                </Link>
                 <div>
                   <Link to="/Exps" className="joinbutton">
                     Read More <img src="/Images/arrow2.jpeg" alt="arrow" />
@@ -64,7 +71,6 @@ function Products() {
               </div>
             </p>
           </motion.div>
-
           <motion.div
             className="child1"
             whileHover={{ scale: 1.1 }}
@@ -73,10 +79,15 @@ function Products() {
             <p className="pp1" style={{ fontWeight: "bold" }}>
               Integrations
               <div>
-                <p className="pp2">
-                  See why Beekeeper is the trusted choice for enhancing the
-                  deskless worker experience.
-                </p>
+                <Link
+                  to={"/Exps"}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <p className="pp2">
+                    See why Beekeeper is the trusted choice for enhancing the
+                    deskless worker experience.
+                  </p>
+                </Link>
                 <div>
                   <Link to="/Exps" className="joinbutton">
                     Read More <img src="/Images/arrow2.jpeg" alt="arrow" />
@@ -88,40 +99,46 @@ function Products() {
         </div>
 
         <motion.div whileHover={{ backgroundColor: "white" }} className="imgss">
-          <motion.img
-            className="sabaa"
-            whileHover={{ scale: 1.2 }}
-            style={{
-              width: "100%",
+          <Link to={"/Exps"}>
+            <motion.img
+              className="sabaa"
+              whileHover={{ scale: 1.2 }}
+              style={{
+                width: "100%",
 
-              objectFit: "cover",
-              borderRadius: "8px",
-              transition: "transform 1s ease-out",
-            }}
-            src="/Images/ssa.webp"
-            alt="ssa"
-          />
-          <motion.p
-            whileHover={{ scale: 1.2 }}
-            style={{
-              fontSize: "17px",
-              padding: "3px",
-              fontWeight: "normal",
-              textAlign: "center",
-              transition: "transform 1s ease-out ",
-            }}
-          >
-            How the traffic control comp <br /> boosts frontline retention by
-            <br /> with Beekeeper and eduMe
-          </motion.p>
-          <motion.img
-            className="saba3"
-            whileHover={{ scale: 1.2 }}
-            transition={{ duration: 0.3 }}
-            style={{ width: "30px", marginLeft: "255px" }}
-            src="/Images/arrow2.jpeg"
-            alt="arrow"
-          />
+                objectFit: "cover",
+                borderRadius: "8px",
+                transition: "transform 1s ease-out",
+              }}
+              src="/Images/ssa.webp"
+              alt="ssa"
+            />
+          </Link>
+          <Link to={"/Exps"} style={{ color: "black", textDecoration: "none" }}>
+            <motion.p
+              whileHover={{ scale: 1.2 }}
+              style={{
+                fontSize: "17px",
+                padding: "3px",
+                fontWeight: "normal",
+                textAlign: "center",
+                transition: "transform 1s ease-out ",
+              }}
+            >
+              How the traffic control comp <br /> boosts frontline retention by
+              <br /> with Beekeeper and eduMe
+            </motion.p>
+          </Link>
+          <Link to={"/Exps"}>
+            <motion.img
+              className="saba3"
+              whileHover={{ scale: 1.2 }}
+              transition={{ duration: 0.3 }}
+              style={{ width: "30px", marginLeft: "255px" }}
+              src="/Images/arrow2.jpeg"
+              alt="arrow"
+            />
+          </Link>
         </motion.div>
       </motion.div>
     </>

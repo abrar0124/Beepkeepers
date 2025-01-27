@@ -2,6 +2,7 @@ import React from "react";
 import "./Sassfile.scss";
 import { motion } from "framer-motion";
 import Header from "../../Header/Header";
+import { Link } from "react-router-dom";
 
 function Solution() {
   return (
@@ -14,114 +15,141 @@ function Solution() {
         style={{ width: "1000px", height: "auto", padding: "30px" }}
       >
         <div>
-          <motion.p
-            whileHover={{ scale: 1.1 }}
-            className="Para1"
-            style={{ transition: "transform 1s ease-out" }}
+          <Link
+            to={"/Solution_Picture"}
+            style={{ textDecoration: "none", color: "black" }}
           >
-            Capabilities
-          </motion.p>
-          <motion.p
-            className="Para2"
-            whileHover={{ scale: 1.2 }}
-            style={{ transition: "transform 1s ease-out" }}
-          >
-            Beekeeper brings essential <br /> capabilities together — from{" "}
+            <motion.p
+              whileHover={{ scale: 1.1 }}
+              className="Para1"
+              style={{ transition: "transform 1s ease-out" }}
+            >
+              Capabilities
+            </motion.p>
+            <motion.p
+              className="Para2"
+              whileHover={{ scale: 1.2 }}
+              style={{ transition: "transform 1s ease-out" }}
+            >
+              Beekeeper brings essential <br /> capabilities together — from{" "}
+              <br />
+              communication to compliance — <br /> empowering every aspect{" "}
+              <br />
+              of frontline success.
+            </motion.p>
+            <p className="Para3">Employee communications</p>
             <br />
-            communication to compliance — <br /> empowering every aspect <br />
-            of frontline success.
-          </motion.p>
-          <p className="Para3">Employee communications</p>
-          <br />
-          <p className="Para3">Employee engagement</p>
-          <br />
-          <p className="Para3">Hiring and onboarding</p>
-          <br />
-          <p className="Para3">Tasks and productivity</p>
+            <p className="Para3">Employee engagement</p>
+            <br />
+            <p className="Para3">Hiring and onboarding</p>
+            <br />
+            <p className="Para3">Tasks and productivity</p>
+          </Link>
         </div>
 
         <div>
-          <motion.p
-            className="Para1"
-            whileHover={{ scale: 1.2 }}
-            style={{ transition: "transform 1s ease-out" }}
+          <Link
+            to={"/Solution_Picture"}
+            style={{ textDecoration: "none", color: "black" }}
           >
-            Industry
-          </motion.p>
-          <motion.p
-            className="Para2"
-            whileHover={{ scale: 1.2 }}
-            style={{ transition: "transform 1s ease-out" }}
-          >
-            Beekeeper brings essential <br /> capabilities together — from{" "}
-            <br />
-            communication to compliance — <br /> empowering every aspect <br />
-            of frontline success.
-          </motion.p>
+            <motion.p
+              className="Para1"
+              whileHover={{ scale: 1.2 }}
+              style={{ transition: "transform 1s ease-out" }}
+            >
+              Industry
+            </motion.p>
+            <motion.p
+              className="Para2"
+              whileHover={{ scale: 1.2 }}
+              style={{ transition: "transform 1s ease-out" }}
+            >
+              Beekeeper brings essential <br /> capabilities together — from{" "}
+              <br />
+              communication to compliance — <br /> empowering every aspect{" "}
+              <br />
+              of frontline success.
+            </motion.p>
 
-          <p className="Para3">Employee communications</p>
-          <br />
-          <p className="Para3">Employee engagement</p>
-          <br />
-          <p className="Para3">Hiring and onboarding</p>
-          <br />
-          <p className="Para3">Tasks and productivity</p>
-          <br />
+            <p className="Para3">Employee communications</p>
+            <br />
+            <p className="Para3">Employee engagement</p>
+            <br />
+            <p className="Para3">Hiring and onboarding</p>
+            <br />
+            <p className="Para3">Tasks and productivity</p>
+            <br />
+          </Link>
         </div>
         <div>
-          <motion.p
-            className="Para1"
-            whileHover={{ scale: 1.2 }}
-            style={{ transition: "transform 1s ease-out" }}
+          <Link
+            to={"/Solution_Picture"}
+            style={{ textDecoration: "none", color: "black" }}
           >
-            Department
-          </motion.p>
-          <motion.p
-            className="Para2"
-            whileHover={{ scale: 1.2 }}
-            style={{ transition: "transform 1s ease-out" }}
-          >
-            Beekeeper brings essential <br /> capabilities together — from{" "}
-            <br />
-            communication to compliance — <br /> empowering every aspect <br />
-            of frontline success.
-          </motion.p>
+            <motion.p
+              className="Para1"
+              whileHover={{ scale: 1.2 }}
+              style={{ transition: "transform 1s ease-out" }}
+            >
+              Department
+            </motion.p>
+            <motion.p
+              className="Para2"
+              whileHover={{ scale: 1.2 }}
+              style={{ transition: "transform 1s ease-out" }}
+            >
+              Beekeeper brings essential <br /> capabilities together — from{" "}
+              <br />
+              communication to compliance — <br /> empowering every aspect{" "}
+              <br />
+              of frontline success.
+            </motion.p>
 
-          <p className="Para3">Employee communications</p>
-          <br />
-          <p className="Para3">Employee engagement</p>
+            <p className="Para3">Employee communications</p>
+            <br />
+            <p className="Para3">Employee engagement</p>
+          </Link>
         </div>
 
         <motion.div whileHover={{ backgroundColor: "white" }} className="imgss">
-          <motion.img
-            className="sabaa"
-            whileHover={{ scale: 1.2 }}
-            style={{
-              width: "100%",
-              height: "150px",
-              objectFit: "cover",
-              borderRadius: "8px",
-              transition: "transform 1s ease-out",
-            }}
-            src="/Images/Fuel.webp"
-          />
-          <motion.p
-            whileHover={{ scale: 1.2 }}
-            style={{
-              fontSize: "17px",
-              padding: "3px",
-              transition: "transform 1s ease-out",
-              textAlign: "center",
-            }}
+          <Link to={"/Solution_Picture"}>
+            <motion.img
+              className="sabaa"
+              whileHover={{ scale: 1.2 }}
+              style={{
+                width: "100%",
+                height: "150px",
+                objectFit: "cover",
+                borderRadius: "8px",
+                transition: "transform 1s ease-out",
+              }}
+              src="/Images/Fuel.webp"
+            />
+          </Link>
+          <Link
+            to={"/Solution_Picture"}
+            style={{ color: "black", textDecoration: "none" }}
           >
-            How the traffic control comp <br /> boosts frontline retention by
-            <br /> with Beekeeper and eduMe
-          </motion.p>
-          <img
-            className="saba3"
-            style={{ width: "30px", marginLeft: "240px" }}
-            src="/Images/arrow2.jpeg"
-          ></img>
+            <motion.p
+              whileHover={{ scale: 1.2 }}
+              style={{
+                fontSize: "17px",
+                padding: "3px",
+                transition: "transform 1s ease-out",
+                textAlign: "center",
+              }}
+            >
+              How the traffic control comp <br /> boosts frontline retention by
+              <br /> with Beekeeper and eduMe
+            </motion.p>
+          </Link>
+          <Link to={"/Solution_Picture"}>
+            <img
+              className="saba3"
+              style={{ width: "30px", marginLeft: "240px" }}
+              src="/Images/arrow2.jpeg"
+            ></img>
+          </Link>
         </motion.div>
       </motion.div>
     </>

@@ -7,6 +7,9 @@ import Fule from "../Fule/Fule";
 import Backbone from "../backbone/Backbone";
 import Beep from "../Pages/Beep";
 import Footer from "../Pages/Footer";
+import Get_Data from "../Get_Data/Get_Data";
+import Integration from "../Integration/Integration";
+import ScrollButton from "../Ebookparts/Scrollbutton";
 function Exp() {
   return (
     <>
@@ -48,8 +51,11 @@ function Exp() {
       <Platform />
       <Activated />
       <Connectivity />
+      <Integration />
+      <Get_Data />
       <Fule />
       <Backbone />
+      <ScrollButton />
       <Beep />
       <Footer />
     </>

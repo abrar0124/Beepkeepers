@@ -12,6 +12,9 @@ import Aboutz from "./pages/Aboutz";
 import Frontlines from "./pages/Frontlines";
 import Producttour from "./pages/Productstour";
 import Exps from "./pages/Exps";
+import Solution_Picture from "./pages/Solution_picture";
+import Resources_compos from "./pages/Resources_compos";
+import About_divs from "./pages/About_divs";
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
           <Route path="/Frontlines" element={<Frontlines />} />
           <Route path="/Producttour" element={<Producttour />} />
           <Route path="/Exps" element={<Exps />} />
+          <Route path="/Solution_Picture" element={<Solution_Picture />} />
+          <Route path="/Resources_compos" element={<Resources_compos />} />
+          <Route path="/About_divs" element={<About_divs />} />
         </Routes>
       </Router>
     </>

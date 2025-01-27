@@ -8,6 +8,8 @@ import Industeries from "../Industries/Industries";
 import Fule from "../Fule/Fule";
 import Beep from "../Pages/Beep";
 import Footer from "../Pages/Footer";
+import Get_Data from "../Get_Data/Get_Data";
+import ScrollButton from "../Ebookparts/Scrollbutton";
 function Frontline() {
   return (
     <>
@@ -34,9 +36,11 @@ function Frontline() {
       <Backbone />
       <Drive />
       <Connectivity />
+      <Get_Data />
       <Industeries />
       <Fule />
       <Backbone />
+      <ScrollButton />
       <Beep />
       <Footer />
       <Fixfooter />

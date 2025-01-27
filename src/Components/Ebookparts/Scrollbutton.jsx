@@ -11,12 +11,11 @@ const ScrollButton = () => {
 
   return (
     <motion.button
-      className="scrollBtn"
       whileHover={{ scale: 1.2 }}
       onClick={scrollToTop}
       style={{
         border: "none",
-        borderRadius: "50%",
+        // borderRadius: "50%",
         marginTop: "15%",
         marginLeft: "50%",
         width: "60px",

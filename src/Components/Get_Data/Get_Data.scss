@@ -1,0 +1,50 @@
+.Get_Container {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3%;
+  .Get_p {
+    padding-bottom: 70px;
+  }
+
+  div[style] {
+    scrollbar-width: none; // For Firefox
+  }
+}
+
+.Get_Content-box {
+  width: 1800px;
+  display: flex;
+  align-items: center;
+  gap: 170px;
+}
+
+.Get_card {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 70px;
+    font-weight: 600;
+    color: #ffffffff;
+  }
+}
+
+.actions_btns {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 50px;
+
+  button {
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}

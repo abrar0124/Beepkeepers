@@ -9,9 +9,7 @@ const MainEbook = () => {
   return (
     <>
       <Header2 />
-      <div className="EbookMain">
-        <Sidebar2 />
-      </div>
+      <Sidebar2 />
       <ScrollButton />
       <Beep />
       <Footer />
